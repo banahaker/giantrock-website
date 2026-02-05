@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary: Based on logo color #24345D */
+  --color-primary-50: #eef0f5;
+  --color-primary-100: #d5dae8;
+  --color-primary-200: #acb4d0;
+  --color-primary-300: #828fb9;
+  --color-primary-400: #5369a1;
+  --color-primary-500: #24345D;
+  --color-primary-600: #1d2a4a;
+  --color-primary-700: #162038;
+  --color-primary-800: #0f1625;
+  --color-primary-900: #0A1C31;
+
+  /* Secondary: Based on logo color #4B60C3 */
+  --color-secondary-50: #eff1fb;
+  --color-secondary-100: #d9dff5;
+  --color-secondary-200: #b3bfeb;
+  --color-secondary-300: #8c9fe0;
+  --color-secondary-400: #6680d7;
+  --color-secondary-500: #4B60C3;
+  --color-secondary-600: #3c4d9c;
+  --color-secondary-700: #2d3a75;
+  --color-secondary-800: #1e264e;
+  --color-secondary-900: #322097;
+
+  /* Accent: Warm contrast color */
+  --color-accent-50: #fef6ee;
+  --color-accent-100: #fce9d5;
+  --color-accent-200: #f9d3ab;
+  --color-accent-300: #f5bd82;
+  --color-accent-400: #f2a758;
+  --color-accent-500: #ef912e;
+  --color-accent-600: #d97b1e;
+  --color-accent-700: #a35f17;
+  --color-accent-800: #6d420f;
+  --color-accent-900: #372208;
+
+  /* Danger: Keep similar for alerts */
+  --color-danger-50: #fef2f2;
+  --color-danger-100: #fee2e2;
+  --color-danger-200: #fecaca;
+  --color-danger-300: #fca5a5;
+  --color-danger-400: #f87171;
+  --color-danger-500: #ef4444;
+  --color-danger-600: #dc2626;
+  --color-danger-700: #b91c1c;
+  --color-danger-800: #991b1b;
+  --color-danger-900: #7f1d1d;
+}
