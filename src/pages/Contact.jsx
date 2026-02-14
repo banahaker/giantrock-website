@@ -2,29 +2,39 @@ import { useState } from "react";
 import Button from "../components/Button";
 import Section, { SectionHeader } from "../components/Section";
 
+// Google Form URL
+const GOOGLE_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSeKrY8Keb2ckH1R-5DAZpGTqp9fJgDbWcePstVo4fTbDTKFUg/formResponse";
+
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    company: "",
-    email: "",
-    inquiryType: "課程報名",
-    address: "",
-    message: "",
-  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: Implement form submission (FormSpree or backend API)
-    console.log("Form submitted:", formData);
-    alert("感謝您的詢問！我們將盡快與您聯繫。");
+    setIsSubmitting(true);
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    const searchParams = new URLSearchParams();
+    formData.forEach((value, key) => {
+      searchParams.append(key, value);
+    });
+
+    try {
+      await fetch(GOOGLE_FORM_URL, {
+        method: "POST",
+        body: searchParams,
+        mode: "no-cors",
+      });
+      alert("感謝您的詢問！我們將盡快與您聯繫。");
+      form.reset();
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("提交失敗，請稍後再試或直接發送郵件至 info@giantrock.com.tw");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -45,27 +55,7 @@ function Contact() {
       <Section bgColor="bg-gray-50">
         <SectionHeader title="聯絡資訊" subtitle="歡迎透過以下方式與我們聯繫" />
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <div className="bg-white p-6 border-l-4 border-secondary-500 hover:border-accent-500 transition-colors duration-200">
-              <div className="flex items-center mb-3">
-                <div className="w-10 h-10 bg-secondary-500 mr-3"></div>
-                <div>
-                  <h3 className="text-lg font-bold text-primary-900 tracking-tight">
-                    電話諮詢
-                  </h3>
-                </div>
-              </div>
-              <p className="text-gray-700 mb-2 text-sm">
-                服務時間：週一至週五 09:00-18:00
-              </p>
-              <p className="text-xl font-semibold text-secondary-600">
-                (02) 1234-5678
-              </p>
-              <p className="text-xs text-gray-600 mt-2">
-                ※ 來電請說明您的需求類型，我們將為您轉接專人服務
-              </p>
-            </div>
-
+          <div className="grid grid-cols-1 gap-6 mb-8">
             <div className="bg-white p-6 border-l-4 border-secondary-500 hover:border-accent-500 transition-colors duration-200">
               <div className="flex items-center mb-3">
                 <div className="w-10 h-10 bg-accent-500 mr-3"></div>
@@ -86,29 +76,6 @@ function Contact() {
               </p>
             </div>
           </div>
-
-          <div className="bg-white p-6 border-l-4 border-primary-500">
-            <div className="flex items-start">
-              <div className="w-10 h-10 bg-primary-700 mr-3 mt-1"></div>
-              <div>
-                <h3 className="text-lg font-bold text-primary-900 mb-2 tracking-tight">
-                  公司地址
-                </h3>
-                <p className="text-gray-800 mb-1 text-sm">
-                  <strong>巨磐資訊安全教育有限公司</strong>
-                </p>
-                <p className="text-gray-800 mb-1 text-sm">
-                  GiantRock Cybersecurity Academy
-                </p>
-                <p className="text-gray-700 text-sm">
-                  台北市信義區信義路五段 7 號 10 樓
-                </p>
-                <p className="text-xs text-gray-600 mt-2">
-                  ※ 如需親臨拜訪，請事先來電預約，以確保專人接待
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </Section>
 
@@ -124,7 +91,7 @@ function Contact() {
             className="bg-white p-6 border-2 border-gray-200"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              {/* Name */}
+              {/* Name - entry.1463598971 */}
               <div>
                 <label
                   htmlFor="name"
@@ -135,16 +102,14 @@ function Contact() {
                 <input
                   type="text"
                   id="name"
-                  name="name"
+                  name="entry.1463598971"
                   required
-                  value={formData.name}
-                  onChange={handleChange}
                   className="w-full px-4 py-2.5 border-2 border-gray-300 focus:border-secondary-500 outline-none transition-all text-sm"
                   placeholder="請輸入您的姓名"
                 />
               </div>
 
-              {/* Company */}
+              {/* Company - entry.214147896 */}
               <div>
                 <label
                   htmlFor="company"
@@ -155,9 +120,7 @@ function Contact() {
                 <input
                   type="text"
                   id="company"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
+                  name="entry.214147896"
                   className="w-full px-4 py-2.5 border-2 border-gray-300 focus:border-secondary-500 outline-none transition-all text-sm"
                   placeholder="請輸入公司名稱（選填）"
                 />
@@ -165,7 +128,7 @@ function Contact() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              {/* Email */}
+              {/* Email - entry.493810458 */}
               <div>
                 <label
                   htmlFor="email"
@@ -176,16 +139,14 @@ function Contact() {
                 <input
                   type="email"
                   id="email"
-                  name="email"
+                  name="entry.493810458"
                   required
-                  value={formData.email}
-                  onChange={handleChange}
                   className="w-full px-4 py-2.5 border-2 border-gray-300 focus:border-secondary-500 outline-none transition-all text-sm"
                   placeholder="example@company.com"
                 />
               </div>
 
-              {/* Inquiry Type */}
+              {/* Inquiry Type - entry.952887416 */}
               <div>
                 <label
                   htmlFor="inquiryType"
@@ -195,22 +156,19 @@ function Contact() {
                 </label>
                 <select
                   id="inquiryType"
-                  name="inquiryType"
+                  name="entry.952887416"
                   required
-                  value={formData.inquiryType}
-                  onChange={handleChange}
                   className="w-full px-4 py-2.5 border-2 border-gray-300 focus:border-secondary-500 outline-none transition-all bg-white text-sm"
                 >
                   <option value="課程報名">課程報名</option>
+                  <option value="報價詢問">報價詢問</option>
+                  <option value="免費資安諮詢">免費資安諮詢</option>
                   <option value="講師申請">講師申請</option>
-                  <option value="企業內訓">企業內訓</option>
-                  <option value="政府補助諮詢">政府補助諮詢</option>
-                  <option value="其他">其他</option>
                 </select>
               </div>
             </div>
 
-            {/* Address */}
+            {/* Address - entry.1500457742 */}
             <div className="mb-6">
               <label
                 htmlFor="address"
@@ -221,15 +179,13 @@ function Contact() {
               <input
                 type="text"
                 id="address"
-                name="address"
-                value={formData.address}
-                onChange={handleChange}
+                name="entry.1500457742"
                 className="w-full px-4 py-2.5 border-2 border-gray-300 focus:border-secondary-500 outline-none transition-all text-sm"
                 placeholder="請輸入聯絡地址（選填）"
               />
             </div>
 
-            {/* Message */}
+            {/* Message - Add your entry ID for message field */}
             <div className="mb-6">
               <label
                 htmlFor="message"
@@ -239,10 +195,8 @@ function Contact() {
               </label>
               <textarea
                 id="message"
-                name="message"
+                name="entry.1334403055"
                 required
-                value={formData.message}
-                onChange={handleChange}
                 rows="6"
                 className="w-full px-4 py-2.5 border-2 border-gray-300 focus:border-secondary-500 outline-none transition-all resize-none text-sm"
                 placeholder="請詳細說明您的需求，例如：&#10;• 希望了解的課程內容&#10;• 預計培訓人數&#10;• 期望的上課時間&#10;• 其他特殊需求"
@@ -261,8 +215,13 @@ function Contact() {
 
             {/* Submit Button */}
             <div className="text-center">
-              <Button type="submit" variant="primary" className="px-12">
-                送出詢問
+              <Button
+                type="submit"
+                variant="primary"
+                className="px-12"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "送出中..." : "送出詢問"}
               </Button>
             </div>
           </form>
@@ -276,16 +235,6 @@ function Contact() {
             常見問題
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-            <div className="bg-white p-5 border-l-4 border-secondary-500 border border-gray-200">
-              <h3 className="font-bold text-primary-900 mb-2 text-sm tracking-tight">
-                Q: 課程可以申請政府補助嗎？
-              </h3>
-              <p className="text-gray-700 text-xs leading-relaxed">
-                A: 可以！我們的課程符合多項政府補助方案，
-                包括企業人力提升計畫等，最高可補助 80%。
-                請在表單中註明需要補助諮詢，我們將協助您申請。
-              </p>
-            </div>
             <div className="bg-white p-5 border-l-4 border-secondary-500 border border-gray-200">
               <h3 className="font-bold text-primary-900 mb-2 text-sm tracking-tight">
                 Q: 最少需要多少人才能開課？

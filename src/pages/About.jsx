@@ -134,7 +134,7 @@ function About() {
                     優渥講師費
                   </h4>
                   <p className="text-gray-600">
-                    每場 NT$5,000-10,000，依經驗調整
+                    每場 NT$5,000-15,000/人（團報優惠，依規模調整）
                   </p>
                 </div>
               </div>

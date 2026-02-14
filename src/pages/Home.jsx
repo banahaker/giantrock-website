@@ -27,7 +27,7 @@ function Home() {
 
             {/* Subtitle */}
             <p className="text-base md:text-lg lg:text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-              專為台灣中小型傳統製造業打造的實戰型資安培訓課程
+              專為台灣傳統企業打造的實戰型資安培訓課程
             </p>
 
             {/* CTA Buttons */}
@@ -85,7 +85,7 @@ function Home() {
           <CourseCard
             title="基礎網路釣魚與員工資安意識"
             description="教導員工識別網路釣魚郵件與詐騙手法，建立企業第一道人為防線。"
-            price="NT$5,000-8,000/人"
+            price="NT$5,000-15,000/人（團報優惠）"
             duration="4-8 小時"
             targetAudience="全體員工"
             outcomes={[
@@ -97,7 +97,7 @@ function Home() {
           <CourseCard
             title="勒索軟體防護與資料備份策略"
             description="從預防到應變，全方位建立勒索軟體防護機制，保護企業核心資料。"
-            price="NT$10,000-15,000/人"
+            price="NT$5,000-15,000/人（團報優惠）"
             duration="6-8 小時"
             targetAudience="IT 管理人員"
             outcomes={[
@@ -109,7 +109,7 @@ function Home() {
           <CourseCard
             title="供應鏈資安與合規管理"
             description="協助企業符合客戶資安要求，強化供應鏈安全管理，取得更多訂單機會。"
-            price="NT$12,000-15,000/人"
+            price="NT$5,000-15,000/人（團報優惠）"
             duration="8 小時"
             targetAudience="採購與法務部門"
             outcomes={[
@@ -139,7 +139,7 @@ function Home() {
               實戰導向培訓
             </h3>
             <p className="text-gray-700 text-sm leading-relaxed">
-              以台灣製造業真實案例為基礎，讓學員學以致用，立即提升企業資安防護能力。
+              以真實案例為基礎，讓學員學以致用，立即提升企業資安防護能力。
             </p>
           </div>
           <div className="bg-white p-5 border-l-4 border-secondary-500 hover:border-accent-500 transition-colors duration-200">

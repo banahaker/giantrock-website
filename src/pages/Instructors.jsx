@@ -1,5 +1,5 @@
-import Button from '../components/Button';
-import Section, { SectionHeader } from '../components/Section';
+import Button from "../components/Button";
+import Section, { SectionHeader } from "../components/Section";
 
 function Instructors() {
   return (
@@ -33,19 +33,26 @@ function Instructors() {
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
                     <span className="text-primary-600 mr-2 text-xl">•</span>
-                    <span><strong>每場次：</strong>NT$5,000 - 10,000</span>
+                    <span>具競爭力報酬，依經驗與堂數調整</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary-600 mr-2 text-xl">•</span>
-                    <span><strong>依經驗調整：</strong>資深講師可達 NT$15,000/場</span>
+                    <span>
+                      <strong>依經驗調整</strong>
+                      ，隨著授課經驗累積，報酬可逐步提升
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary-600 mr-2 text-xl">•</span>
-                    <span><strong>額外獎金：</strong>學員滿意度達 4.5 分以上額外獎勵</span>
+                    <span>
+                      <strong>額外獎金：</strong>學員滿意度達 4.5 分以上額外獎勵
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary-600 mr-2 text-xl">•</span>
-                    <span><strong>交通補助：</strong>外縣市授課提供交通與住宿補助</span>
+                    <span>
+                      <strong>交通補助：</strong>外縣市授課提供交通與住宿補助
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -57,19 +64,27 @@ function Instructors() {
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
                     <span className="text-secondary-600 mr-2 text-xl">•</span>
-                    <span><strong>自由排班：</strong>透過 App 自行選擇授課時段</span>
+                    <span>
+                      <strong>自由排班：</strong>可自行決定可接課時間與授課頻率
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-secondary-600 mr-2 text-xl">•</span>
-                    <span><strong>兼職全職：</strong>可彈性搭配正職工作</span>
+                    <span>
+                      <strong>兼職全職：</strong>可彈性搭配正職工作
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-secondary-600 mr-2 text-xl">•</span>
-                    <span><strong>線上線下：</strong>提供實體與線上課程選擇</span>
+                    <span>
+                      <strong>線上線下：</strong>提供實體與線上課程選擇
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-secondary-600 mr-2 text-xl">•</span>
-                    <span><strong>無最低時數：</strong>沒有每月授課時數限制</span>
+                    <span>
+                      <strong>無最低時數：</strong>沒有每月授課時數限制
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -126,13 +141,14 @@ function Instructors() {
                   申請與初步篩選
                 </h3>
                 <p className="text-gray-700 mb-4">
-                  填寫線上申請表，提供個人履歷、資安相關證照或經歷。
-                  我們會透過 LinkedIn 或書面資料進行初步審核。
+                  填寫線上申請表，提供個人履歷、資安相關證照或經歷。 我們會透過
+                  LinkedIn 或書面資料進行初步審核。
                 </p>
                 <div className="bg-primary-50 p-4 rounded-md">
                   <p className="text-sm text-gray-700">
-                    <strong>基本要求：</strong>具備資安相關證照（如 CEH、CISSP、ISO 27001 LA）
-                    或至少 3 年資安實務經驗，有教學或簡報經驗者優先。
+                    <strong>基本要求：</strong>具備資安相關證照（如
+                    CEH、CISSP、ISO 27001 LA） 或至少 3
+                    年資安實務經驗，有教學或簡報經驗者優先。
                   </p>
                 </div>
               </div>
@@ -148,12 +164,14 @@ function Instructors() {
                   試教與面試
                 </h3>
                 <p className="text-gray-700 mb-4">
-                  通過初審後，將安排 15-20 分鐘的試教。您需要從我們提供的主題中選一個，
+                  通過初審後，將安排 15-20
+                  分鐘的試教。您需要從我們提供的主題中選一個，
                   模擬對企業員工授課的情境。我們會評估您的表達能力、互動技巧與專業度。
                 </p>
                 <div className="bg-secondary-50 p-4 rounded-md">
                   <p className="text-sm text-gray-700">
-                    <strong>評估重點：</strong>清晰的表達、案例運用、互動設計、時間掌控。
+                    <strong>評估重點：</strong>
+                    清晰的表達、案例運用、互動設計、時間掌控。
                     不需要華麗的簡報，重點是能否讓非資安背景的學員聽懂。
                   </p>
                 </div>
@@ -176,8 +194,9 @@ function Instructors() {
                 </p>
                 <div className="bg-accent-50 p-4 rounded-md">
                   <p className="text-sm text-gray-700">
-                    <strong>培訓內容：</strong>成人學習理論、互動技巧、案例帶領、
-                    Q&A 應對、教材使用說明、平台操作教學。
+                    <strong>培訓內容：</strong>
+                    成人學習理論、互動技巧、案例帶領、 Q&A
+                    應對、教材使用說明、平台操作教學。
                   </p>
                 </div>
               </div>
@@ -261,9 +280,6 @@ function Instructors() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button variant="primary" to="/contact" className="text-lg">
               申請講師
-            </Button>
-            <Button variant="outlineWhite" className="text-lg">
-              下載培訓手冊
             </Button>
           </div>
           <p className="text-sm text-accent-200 mt-6">

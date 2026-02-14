@@ -27,7 +27,7 @@ function Courses() {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="text-3xl font-bold text-primary-600 mb-2">💰</div>
               <div className="font-semibold text-gray-900 mb-1">課程費用</div>
-              <div className="text-gray-600">NT$5,000-15,000/人</div>
+              <div className="text-gray-600">價格範圍：NT$5,000-15,000/人（團報優惠，依規模調整）</div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="text-3xl font-bold text-primary-600 mb-2">⏱️</div>
@@ -88,7 +88,7 @@ function Courses() {
                       </li>
                       <li className="flex items-start">
                         <span className="text-primary-600 mr-2">•</span>
-                        <span><strong>費用：</strong>NT$5,000/人</span>
+                        <span><strong>費用：</strong>NT$5,000-15,000/人（團報優惠，依規模調整）</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-primary-600 mr-2">•</span>
@@ -115,7 +115,7 @@ function Courses() {
                       </li>
                       <li className="flex items-start">
                         <span className="text-secondary-600 mr-2">•</span>
-                        <span><strong>費用：</strong>NT$3,000/人</span>
+                        <span><strong>費用：</strong>NT$5,000-15,000/人（團報優惠，依規模調整）</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-secondary-600 mr-2">•</span>
@@ -221,7 +221,7 @@ function Courses() {
                       </li>
                       <li className="flex items-start">
                         <span className="text-danger-600 mr-2">•</span>
-                        <span><strong>費用：</strong>NT$12,000/人</span>
+                        <span><strong>費用：</strong>NT$5,000-15,000/人（團報優惠，依規模調整）</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-danger-600 mr-2">•</span>
@@ -244,7 +244,7 @@ function Courses() {
                     <ul className="space-y-2 text-gray-700">
                       <li className="flex items-start">
                         <span className="text-accent-600 mr-2">•</span>
-                        <span><strong>費用：</strong>NT$15,000/月（企業方案）</span>
+                        <span><strong>費用：</strong>NT$5,000-15,000/人（團報優惠，依規模調整）</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-accent-600 mr-2">•</span>
@@ -351,7 +351,7 @@ function Courses() {
                       </li>
                       <li className="flex items-start">
                         <span className="text-secondary-600 mr-2">•</span>
-                        <span><strong>費用：</strong>NT$10,000/人</span>
+                        <span><strong>費用：</strong>NT$5,000-15,000/人（團報優惠，依規模調整）</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-secondary-600 mr-2">•</span>
@@ -374,7 +374,7 @@ function Courses() {
                     <ul className="space-y-2 text-gray-700">
                       <li className="flex items-start">
                         <span className="text-primary-600 mr-2">•</span>
-                        <span><strong>費用：</strong>NT$15,000/人 + 顧問費</span>
+                        <span><strong>費用：</strong>NT$5,000-15,000/人（團報優惠，依規模調整）</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-primary-600 mr-2">•</span>
