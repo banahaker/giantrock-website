@@ -167,6 +167,7 @@ function Instructors() {
                   通過初審後，將安排 15-20
                   分鐘的試教。您需要從我們提供的主題中選一個，
                   模擬對企業員工授課的情境。我們會評估您的表達能力、互動技巧與專業度。
+                  (試教會給予時薪)
                 </p>
                 <div className="bg-secondary-50 p-4 rounded-md">
                   <p className="text-sm text-gray-700">

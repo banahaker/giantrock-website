@@ -69,7 +69,7 @@ function Contact() {
                 我們將在 24 小時內回覆您的來信
               </p>
               <p className="text-xl font-semibold text-secondary-600 break-all">
-                info@giantrock.com.tw
+                giantrocktw@gmail.com
               </p>
               <p className="text-xs text-gray-600 mt-2">
                 ※ 請在主旨註明「課程報名」或「講師申請」以加快處理速度
@@ -240,8 +240,8 @@ function Contact() {
                 Q: 最少需要多少人才能開課？
               </h3>
               <p className="text-gray-700 text-xs leading-relaxed">
-                A: 企業內訓最少 10 人即可開課， 公開班則視報名狀況而定。
-                如果貴公司人數不足，我們也可以協助媒合其他企業一起上課。
+                A: 企業內訓最少 10
+                人即可開課，公開班則視報名狀況而定。小型公司若人數較少或是預算有限，我們也非常歡迎貴公司詢問，我們將提供針對小型企業的彈性方案，以滿足您的需求。
               </p>
             </div>
             <div className="bg-white p-5 border-l-4 border-secondary-500 border border-gray-200">
