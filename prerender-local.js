@@ -13,15 +13,7 @@ const baseUrl = 'http://localhost:4173';
 const routes = ['/', '/about', '/courses', '/instructors', '/contact'];
 
 async function prerender() {
-  // Skip prerendering in Netlify build environment
-  // Netlify will handle client-side routing
-  if (process.env.NETLIFY) {
-    console.log('⚠️  Running in Netlify environment - skipping prerender');
-    console.log('💡 Netlify will handle client-side routing with _redirects');
-    return;
-  }
-
-  console.log('🚀 Starting prerender...');
+  console.log('🚀 Starting local prerender...');
 
   // Start vite preview server
   const server = await preview({

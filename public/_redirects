@@ -1,1 +1,3 @@
-/*    /index.html   200
+# Netlify redirects for SPA with SEO meta tags
+# All routes are handled by the SPA with react-helmet-async managing SEO
+/*  /index.html  200
