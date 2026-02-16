@@ -1,8 +1,32 @@
 import Button from "../components/Button";
 import Section, { SectionHeader } from "../components/Section";
+import SEO from "../components/SEO";
+import StructuredData from "../components/StructuredData";
 
 function About() {
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "巨磐資安培訓學院",
+    "alternateName": "GiantRock Cybersecurity Academy",
+    "url": "https://www.giantrocktw.com",
+    "description": "專為台灣傳統製造業打造的實戰型資安培訓學院",
+    "email": "service@giantrocktw.com",
+    "areaServed": {
+      "@type": "Country",
+      "name": "TW"
+    }
+  };
+
   return (
+    <>
+      <SEO
+        title="關於我們"
+        description="了解巨磐資安培訓學院的使命與背景。我們致力於協助台灣中小企業建立堅實的資安防護能力，提供實戰導向、在地化的資安教育服務。"
+        keywords="巨磐資安,資安培訓學院,拉資科科技,企業資安教育,資安夥伴,資安顧問"
+        canonical="/about"
+      />
+      <StructuredData data={localBusinessSchema} />
     <div>
       {/* Hero Section */}
       <section className="bg-primary-900 text-white py-12 md:py-16 border-b-4 border-secondary-500">
@@ -187,6 +211,7 @@ function About() {
         </div>
       </Section>
     </div>
+  </>
   );
 }
 

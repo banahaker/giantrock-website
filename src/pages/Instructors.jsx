@@ -1,8 +1,16 @@
 import Button from "../components/Button";
 import Section, { SectionHeader } from "../components/Section";
+import SEO from "../components/SEO";
 
 function Instructors() {
   return (
+    <>
+      <SEO
+        title="講師招募"
+        description="尋找資安專業人士加入我們的講師團隊。彈性工作時間、優渥講師費、完整教材支援。具備CEH、CISSP等認證或3年以上資安經驗者歡迎申請。"
+        keywords="資安講師,資安培訓講師,講師招募,兼職講師,資安工作,資安教學,CEH,CISSP,資安顧問"
+        canonical="/instructors"
+      />
     <div>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-accent-700 to-accent-900 text-white py-16 md:py-24">
@@ -289,6 +297,7 @@ function Instructors() {
         </div>
       </Section>
     </div>
+  </>
   );
 }
 

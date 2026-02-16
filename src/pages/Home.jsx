@@ -1,9 +1,47 @@
 import Button from "../components/Button";
 import CourseCard from "../components/CourseCard";
 import Section, { SectionHeader } from "../components/Section";
+import SEO from "../components/SEO";
+import StructuredData from "../components/StructuredData";
 
 function Home() {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "巨磐資安培訓學院",
+    "alternateName": "GiantRock Cybersecurity Academy",
+    "legalName": "拉資科科技有限公司",
+    "url": "https://www.giantrocktw.com",
+    "logo": "https://www.giantrocktw.com/logo_blue_full.png",
+    "description": "專為台灣中小企業打造的實戰型資安培訓學院。提供網路釣魚防護、勒索軟體應變、供應鏈資安等課程。",
+    "email": "service@giantrocktw.com",
+    "areaServed": {
+      "@type": "Country",
+      "name": "TW"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "service@giantrocktw.com",
+      "contactType": "customer service",
+      "areaServed": "TW",
+      "availableLanguage": ["zh-TW", "zh-Hant"]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "150"
+    }
+  };
+
   return (
+    <>
+      <SEO
+        title="保護您的企業，從資安開始"
+        description="專為台灣傳統製造業打造的實戰型資安培訓。500+企業客戶，30%降低資安事件，10,000+培訓人次。提供網路釣魚防護、勒索軟體應變、供應鏈資安管理等課程。"
+        keywords="資安培訓,企業資安,網路釣魚,勒索軟體,資安教育,製造業資安,資安課程,資安意識,供應鏈資安,個資保護"
+        canonical="/"
+      />
+      <StructuredData data={organizationSchema} />
     <div>
       {/* Hero Banner */}
       <section className="relative bg-white text-primary-900 py-12 md:py-16 border-b-4 border-secondary-500">
@@ -215,6 +253,7 @@ function Home() {
         </div>
       </Section>
     </div>
+  </>
   );
 }
 

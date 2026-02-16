@@ -1,8 +1,70 @@
 import Button from '../components/Button';
 import Section, { SectionHeader } from '../components/Section';
+import SEO from "../components/SEO";
+import StructuredData from "../components/StructuredData";
 
 function Courses() {
+  const coursesSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "Course",
+        "position": 1,
+        "name": "基礎網路釣魚與員工資安意識",
+        "description": "教導員工識別網路釣魚郵件與詐騙手法，建立企業第一道人為防線。",
+        "provider": {
+          "@type": "Organization",
+          "name": "巨磐資安培訓學院"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "TWD",
+          "price": "5000-15000"
+        }
+      },
+      {
+        "@type": "Course",
+        "position": 2,
+        "name": "勒索軟體防護與資料備份策略",
+        "description": "從預防到應變，全方位建立勒索軟體防護機制，保護企業核心資料。",
+        "provider": {
+          "@type": "Organization",
+          "name": "巨磐資安培訓學院"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "TWD",
+          "price": "5000-15000"
+        }
+      },
+      {
+        "@type": "Course",
+        "position": 3,
+        "name": "供應鏈資安與合規管理",
+        "description": "協助企業符合客戶資安要求，強化供應鏈安全管理，取得更多訂單機會。",
+        "provider": {
+          "@type": "Organization",
+          "name": "巨磐資安培訓學院"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "TWD",
+          "price": "5000-15000"
+        }
+      }
+    ]
+  };
+
   return (
+    <>
+      <SEO
+        title="資安培訓課程"
+        description="專為台灣中小企業設計的實戰型資安課程。包含基礎網路釣魚防護、勒索軟體應變與備份策略、供應鏈資安與合規管理等培訓。可申請政府補助，提供內訓服務。"
+        keywords="資安課程,資安培訓,網路釣魚防護,勒索軟體,供應鏈資安,ISO 27001,個資法,企業內訓,資安認證,政府培訓補助"
+        canonical="/courses"
+      />
+      <StructuredData data={coursesSchema} />
     <div>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-800 to-secondary-800 text-white py-16 md:py-24">
@@ -455,6 +517,7 @@ function Courses() {
         </div>
       </Section>
     </div>
+  </>
   );
 }
 

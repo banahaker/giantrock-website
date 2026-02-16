@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Button from "../components/Button";
 import Section, { SectionHeader } from "../components/Section";
+import SEO from "../components/SEO";
+import StructuredData from "../components/StructuredData";
 
 // Google Form URL
 const GOOGLE_FORM_URL =
@@ -37,7 +39,46 @@ function Contact() {
     }
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "最少需要多少人才能開課？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "企業內訓最少10人即可開課，公開班則視報名狀況而定。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "講師申請需要什麼資格？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "基本要求為具備資安相關證照（如CEH、CISSP）或至少3年資安實務經驗。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "課程可以客製化內容嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "當然可以！我們提供客製化企業內訓服務，可根據貴公司的產業特性、資安現況調整課程內容。"
+        }
+      }
+    ]
+  };
+
   return (
+    <>
+      <SEO
+        title="聯絡我們"
+        description="聯絡巨磐資安培訓學院。提供免費資安諮詢、課程報名、企業內訓詢問服務。Email: service@giantrocktw.com。24小時內回覆，協助您找到最適合的資安培訓方案。"
+        keywords="資安諮詢,資安培訓報名,企業內訓,資安課程詢問,資安顧問聯絡,資安培訓價格,免費資安健檢"
+        canonical="/contact"
+      />
+      <StructuredData data={faqSchema} />
     <div>
       {/* Hero Section */}
       <section className="bg-primary-900 text-white py-12 md:py-16 border-b-4 border-secondary-500">
@@ -268,6 +309,7 @@ function Contact() {
         </div>
       </Section>
     </div>
+  </>
   );
 }
 
