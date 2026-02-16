@@ -150,7 +150,16 @@ function Layout({ children }) {
                 聯絡資訊
               </h4>
               <p className="text-sm text-gray-400 font-light leading-relaxed">
-                專為台灣中小製造業打造的實戰型資安培訓學院
+                Email:{" "}
+                <a
+                  href="mailto:info@giantrock.com.tw"
+                  className="text-secondary-400 hover:text-accent-500 transition-colors duration-150"
+                >
+                  service@giantrocktw.com
+                </a>
+              </p>
+              <p className="text-sm text-gray-400 font-light leading-relaxed pt-2">
+                專為台灣中小企業打造的實戰型資安培訓學院
               </p>
             </div>
 

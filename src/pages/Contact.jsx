@@ -69,7 +69,7 @@ function Contact() {
                 我們將在 24 小時內回覆您的來信
               </p>
               <p className="text-xl font-semibold text-secondary-600 break-all">
-                giantrocktw@gmail.com
+                service@giantrocktw.com
               </p>
               <p className="text-xs text-gray-600 mt-2">
                 ※ 請在主旨註明「課程報名」或「講師申請」以加快處理速度
