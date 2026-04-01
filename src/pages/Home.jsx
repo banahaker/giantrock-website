@@ -89,7 +89,7 @@ function Home() {
               title="專注台灣中小企業的資安夥伴"
               subtitle="巨磐資安培訓學院深耕台灣中小企業市場，理解台灣中小企業在數位轉型過程中面臨的資安挑戰。我們提供實戰導向、接地氣的資安培訓，幫助企業建立堅實的資安防護能力。"
             />
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+            {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
               <div className="bg-white p-5 border-2 border-gray-200">
                 <div className="text-3xl font-bold text-secondary-600 mb-1">
                   500+
@@ -114,7 +114,7 @@ function Home() {
                   培訓人次
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </Section>
 

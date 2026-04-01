@@ -43,12 +43,12 @@ function Layout({ children }) {
               >
                 課程介紹
               </Link>
-              <Link
+              {/* <Link
                 to="/instructors"
                 className="text-primary-900 hover:bg-primary-50 px-4 py-2 transition-colors duration-150 font-medium text-sm tracking-wide border-b-2 border-transparent hover:border-secondary-500"
               >
                 講師培訓
-              </Link>
+              </Link> */}
               <Link
                 to="/contact"
                 className="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2 ml-2 transition-colors duration-150 font-semibold text-sm tracking-wide border border-accent-600"

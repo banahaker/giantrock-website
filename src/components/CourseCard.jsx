@@ -90,12 +90,16 @@ const CourseCard = ({
         )}
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 mt-6 pt-4 border-t border-gray-200">
-          <Button variant="primary" to="/contact" className="flex-1">
+
+        <div className="flex flex-col items-center sm:flex-row gap-3 mt-6 pt-4 border-t border-gray-200 sm:justify-center">
+          {/* <Button variant="primary" to="/contact" className="flex-1">
             報名課程
           </Button>
           <Button variant="outline" className="flex-1">
             課程大綱
+          </Button> */}
+          <Button variant="primary" to="/contact" className="px-6">
+            聯絡我們
           </Button>
         </div>
       </div>

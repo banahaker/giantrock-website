@@ -95,7 +95,7 @@ function Courses() {
                 </div>
                 <div className="font-semibold text-gray-900 mb-1">課程費用</div>
                 <div className="text-gray-600">
-                  價格範圍：NT$5,000-15,000/人）
+                  依企業規模與需求，提供最適合的培訓方案與報價
                 </div>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
