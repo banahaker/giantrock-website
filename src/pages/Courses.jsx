@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import Section, { SectionHeader } from "../components/Section";
 import SEO from "../components/SEO";
@@ -163,14 +164,14 @@ function Courses() {
                         <li className="flex items-start">
                           <span className="text-primary-600 mr-2">•</span>
                           <span>
-                            <strong>時長：</strong>4 小時
+                            <strong>時長：</strong>2 小時
                           </span>
                         </li>
                         <li className="flex items-start">
                           <span className="text-primary-600 mr-2">•</span>
                           <span>
                             <strong>費用：</strong>
-                            NT$68,888 ~ NT$108,888/場（依實際報價調整）
+                            NT$88,888 - 108,888/場（依實際報價調整）
                           </span>
                         </li>
                         <li className="flex items-start">
@@ -278,13 +279,26 @@ function Courses() {
                   </p>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button variant="primary" to="/contact" className="flex-1">
-                    報名課程
-                  </Button>
-                  <Button variant="outline" className="flex-1">
-                    免費下載課程大綱 PDF
-                  </Button>
+                <div className="flex flex-col sm:flex-row sm:gap-4">
+                  <div className="flex-1">
+                    <Button variant="primary" to="/contact" className="w-full">
+                      報名課程
+                    </Button>
+                  </div>
+                  <div className="flex-1">
+                    <Link
+                      to="https://hackmd.io/@Origami/Sydb399sZx"
+                      className="w-full"
+                      target="_blank"
+                    >
+                      <Button
+                        variant="outline"
+                        className="w-full cursor-pointer"
+                      >
+                        免費下載課程大綱 PDF
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -345,7 +359,7 @@ function Courses() {
                           <span className="text-danger-600 mr-2">•</span>
                           <span>
                             <strong>費用：</strong>
-                            NT$128,888 - 168,888/場（依實際報價調整）
+                            NT$168,888 - 208,888/場（依實際報價調整）
                           </span>
                         </li>
                         <li className="flex items-start">
@@ -452,9 +466,9 @@ function Courses() {
                   <Button variant="primary" to="/contact" className="flex-1">
                     報名課程
                   </Button>
-                  <Button variant="outline" className="flex-1">
+                  {/* <Button variant="outline" className="flex-1">
                     免費下載課程大綱 PDF
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </div>
@@ -624,9 +638,9 @@ function Courses() {
                   <Button variant="primary" to="/contact" className="flex-1">
                     報名課程
                   </Button>
-                  <Button variant="outline" className="flex-1">
+                  {/* <Button variant="outline" className="flex-1">
                     免費下載課程大綱 PDF
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </div>
