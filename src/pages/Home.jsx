@@ -10,7 +10,7 @@ function Home() {
     "@type": "Organization",
     name: "巨磐資安培訓學院",
     alternateName: "GiantRock Cybersecurity Academy",
-    legalName: "拉資科科技有限公司",
+    // legalName: "拉資科科技有限公司",
     url: "https://www.giantrocktw.com",
     logo: "https://www.giantrocktw.com/logo_blue_full.png",
     description:

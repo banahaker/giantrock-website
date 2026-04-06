@@ -152,9 +152,6 @@ function Layout({ children }) {
               <p className="text-sm text-gray-400 mb-1 font-light">
                 GiantRock Cybersecurity Academy
               </p>
-              <p className="text-sm text-gray-400 font-light">
-                拉資科科技有限公司
-              </p>
             </div>
 
             {/* Contact Info */}
@@ -225,7 +222,7 @@ function Layout({ children }) {
           {/* Footer Bottom */}
           <div className="border-t border-primary-800 pt-6 mt-2">
             <p className="text-center text-xs text-gray-500 font-light tracking-wide">
-              © 2026 拉資科科技有限公司 版權所有
+              © 2026 巨磐資訊安全教育有限公司 版權所有
             </p>
           </div>
         </div>
