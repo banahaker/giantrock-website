@@ -6,6 +6,7 @@ import Courses from "./pages/Courses";
 import About from "./pages/About";
 import Instructors from "./pages/Instructors";
 import Contact from "./pages/Contact";
+import ForSchool from "./pages/ForSchool";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/courses" element={<Courses />} />
           <Route path="/instructors" element={<Instructors />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/for-school" element={<ForSchool />} />
         </Routes>
       </Layout>
     </Router>

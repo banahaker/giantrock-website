@@ -43,6 +43,12 @@ function Layout({ children }) {
               >
                 課程介紹
               </Link>
+              <Link
+                to="/for-school"
+                className="text-primary-900 hover:bg-primary-50 px-4 py-2 transition-colors duration-150 font-medium text-sm tracking-wide border-b-2 border-transparent hover:border-secondary-500"
+              >
+                學校專區
+              </Link>
               {/* <Link
                 to="/instructors"
                 className="text-primary-900 hover:bg-primary-50 px-4 py-2 transition-colors duration-150 font-medium text-sm tracking-wide border-b-2 border-transparent hover:border-secondary-500"
@@ -104,6 +110,13 @@ function Layout({ children }) {
                 className="block px-4 py-2 text-primary-900 hover:bg-primary-50 transition-colors duration-150 text-sm font-medium"
               >
                 課程介紹
+              </Link>
+              <Link
+                to="/for-school"
+                onClick={toggleMobileMenu}
+                className="block px-4 py-2 text-primary-900 hover:bg-primary-50 transition-colors duration-150 text-sm font-medium"
+              >
+                學校專區
               </Link>
               <Link
                 to="/instructors"
@@ -192,6 +205,12 @@ function Layout({ children }) {
                   className="text-sm text-gray-400 hover:text-secondary-400 transition-colors duration-150 font-light"
                 >
                   講師培訓
+                </Link>
+                <Link
+                  to="/for-school"
+                  className="text-sm text-gray-400 hover:text-secondary-400 transition-colors duration-150 font-light"
+                >
+                  學校專區
                 </Link>
                 <Link
                   to="/contact"

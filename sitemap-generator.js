@@ -13,7 +13,8 @@ const pages = [
   { url: '/about', changefreq: 'monthly', priority: '0.8', lastmod: currentDate },
   { url: '/courses', changefreq: 'weekly', priority: '0.9', lastmod: currentDate },
   { url: '/instructors', changefreq: 'monthly', priority: '0.7', lastmod: currentDate },
-  { url: '/contact', changefreq: 'monthly', priority: '0.6', lastmod: currentDate }
+  { url: '/contact', changefreq: 'monthly', priority: '0.6', lastmod: currentDate },
+  { url: '/for-school', changefreq: 'weekly', priority: '0.9', lastmod: currentDate }
 ];
 
 function generateSitemap() {

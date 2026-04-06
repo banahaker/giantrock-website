@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 const distDir = path.join(__dirname, 'dist');
 const baseUrl = 'http://localhost:4173';
 
-const routes = ['/', '/about', '/courses', '/instructors', '/contact'];
+const routes = ['/', '/about', '/courses', '/instructors', '/contact', '/for-school'];
 
 async function prerender() {
   console.log('🚀 Starting local prerender...');
